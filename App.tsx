@@ -4,18 +4,38 @@
  *
  * @format
  */
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Text, View, Button, StyleSheet } from 'react-native'
 
-import React from 'react';
-import { View, Text } from 'react-native';
+// import Register from './src/register';
+import Profile from './src/profile';
+import Register from './src/register';
+import HomePage from './src/homePage';
 
-import Cafe from './src/ejerciciosDocumentacion';
+const Tab = createBottomTabNavigator();
+
+const MyTabs = () => {
+
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name='Home' >
+        {() => <HomePage /> }
+      </Tab.Screen>
+      <Tab.Screen name='Profile'>
+        {() => <Profile /> }
+      </Tab.Screen>
+    </Tab.Navigator>
+  );
+};
 
 const App = () => {
   return (
-    <View>
-      <Cafe />
-    </View>
+    <NavigationContainer>
+      <MyTabs />
+    </NavigationContainer>
   );
-}
+};
 
 export default App;
