@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {SectionList, StyleSheet, Text, View} from 'react-native';
 
 const styles = StyleSheet.create({
