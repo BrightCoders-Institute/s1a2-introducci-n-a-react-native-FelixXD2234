@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   },
   sectionHeader: {
     paddingTop: 2,
-    paddingLeft: 10,
+    paddingLeft: 15,
     paddingRight: 10,
     paddingBottom: 2,
     fontSize: 14,
